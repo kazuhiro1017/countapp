@@ -7,17 +7,27 @@
   position: relative;
   form{
     position: absolute;
-    margin: 20px 0;
-    padding: 50px;
+    margin: 5px 0;
+    padding: 40px;
     box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-    background-color: white;
+    background-color: #bbeef7;
     box-sizing: border-box;
     border-radius: 10px;
+    .userfeel{
+      font-family: 'Baloo Bhai', cursive;
+      font-size: 20px;
+    }
     .time{
+      margin-top: 10px;
       margin-bottom: 12px;
+      border-radius: 5px;
+      #post_time{
+        font-size: 15px;
+      }
     }
     .text{
       margin-bottom: 12px;
+      border-radius: 5px;
     }
   }
 }

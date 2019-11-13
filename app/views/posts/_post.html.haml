@@ -1,7 +1,12 @@
 .partialpost
-  %span 
+  .sendtime
+    = post.created_at.strftime("%Y/%m/%d (%a) %H:%M")
+  %span.recordletter Record:
+  %span.timeletter
     = post.time
-  = simple_format(post.text)
-  %span User: 
-  %span
-    = post.user.nickname
+  %span.textletter 
+    = simple_format(post.text)
+  %ul
+    %li.nickname @
+    %li.nickname
+      = post.user.nickname
