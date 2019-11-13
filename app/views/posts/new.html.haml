@@ -1,0 +1,23 @@
+#wrapper
+  %header
+    %h1 Count Up
+    %p#record
+      Best Record :
+      %span 0
+    %p#timer
+      Time :
+      %span 0
+
+  #game
+    #numbers
+    #startScene
+      %p
+      %button START
+
+- if user_signed_in?
+  .formall
+    = form_with model: @post, html: {class: "form"}, local: true do |f|
+      = f.text_field :time, class: "time", placeholder: "type your time", cols: "30"
+      = f.text_area :text, class: "text", placeholder: "type your comment", cols: "30"
+      = f.submit "Send", class: "submit-btn"
+    

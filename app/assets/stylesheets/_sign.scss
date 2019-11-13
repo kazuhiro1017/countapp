@@ -1,0 +1,56 @@
+.signimage{
+  background-image: url("./animals.jpg");
+  background-size: 57%;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  .contents{
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 0;
+    margin-left: 390px;
+    max-width: 660px;
+    position: absolute;
+    .container {
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba($black,0.2);
+      background-color: #97ebfa;
+      box-sizing: border-box;
+      h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+    }
+    form {
+      margin: 0 50px;
+      h3 {
+        text-align: center;
+        font-weight: normal;
+        font-size: 20px;
+        color: $dark;
+      }
+      input,textarea {
+        width: 100%;
+        border: 1px solid $gray;
+        border-radius: 5px;
+        font-family: "游ゴシック", "YuGothic";
+        margin: 10px 0;
+        margin-bottom: 15px;
+        
+      }
+      input[type="submit"] {
+        background-color: $accent;
+        border-radius: 20px;
+        color: #fff;
+        border: 0;
+        font-size: 18px;
+        width: 130px;
+        &:hover {
+          background-color: lighten($accent, 10%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.partialpost
+  %span 
+    = post.time
+  = simple_format(post.text)
+  %span User: 
+  %span
+    = post.user.nickname
