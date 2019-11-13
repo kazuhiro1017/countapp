@@ -17,7 +17,8 @@
 - if user_signed_in?
   .formall
     = form_with model: @post, html: {class: "form"}, local: true do |f|
-      = f.text_field :time, class: "time", placeholder: "type your time", cols: "30"
+      %span.userfeel how was your game?
+      = f.text_field :time, class: "time", placeholder: "your time", readonly:""
       = f.text_area :text, class: "text", placeholder: "type your comment", cols: "30"
       = f.submit "Send", class: "submit-btn"
     

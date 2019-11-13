@@ -78,12 +78,17 @@ $(function() {
           // プレイ時間の表示
           $("#startScene p").html("Your Record : " + $("#timer span").html());
 
+          // formへ"#timer span"を飛ばす!!!
+　　　　　　$("#post_time").val($("#timer span").html())
+
           // ボタンのテキスト変更
           $("button").html("PLAY AGAIN");
 
 
           // スタート画面の表示
           $("#startScene").show();
+
+          
 
           // プレイ時間の比較
           if($("#record span").html() - $("#timer span").html() > 0 || $("#record span").html() == 0){
