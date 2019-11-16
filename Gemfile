@@ -69,3 +69,5 @@ gem 'jquery-ui-rails'
 
 gem "pry-rails"
 gem "kaminari"
+
+gem "font-awesome-rails"
