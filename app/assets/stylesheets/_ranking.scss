@@ -1,0 +1,78 @@
+.ranking{
+  float: right;
+  margin-top: -1930px;
+  margin-right: 300px;
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 30px;
+  color: rgb(255, 81, 0);
+}
+.topthreeletter{
+  float: right;
+  margin-top: -1880px;
+  margin-right: 395px;
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 22px;
+  color: rgb(255, 136, 0);
+}
+.needsignin{
+  float: right;
+  margin-top: -1820px;
+  margin-right: 240px;
+  font-family: 'Contrail One', cursive;
+  font-size: 20px;
+  .sign-in{
+    text-decoration: none;
+    font-family: 'Baloo Bhai', cursive;
+    color: #41b1f1;
+    font-size: 30px;
+    margin: 0 8px;
+  }
+}
+
+.topthreerecords{
+  float: right;
+  margin-top: -1800px;
+  margin-right: 155px;
+  font-family: 'Black Han Sans', sans-serif;
+  ul.topthreepeople{
+    display: flex;
+    margin-bottom: 10px;
+    li.figure{
+      font-size: 40px;
+      margin-top: -10px;
+      span.shape{
+        margin-right: -11px;
+        font-size: 20px;
+      }
+      span.oneshape{
+        margin-right: -11px;
+        font-size: 20px;
+        color: rgb(255, 0, 0);
+      }
+      span.addcolortofigure{
+        color: rgb(255, 0, 0);
+      }
+    }
+    li.rankingtime{
+      margin-left: 40px;
+      margin-top: -50px;
+      font-size: 70px;
+      font-family: "Kokoro", cursive;
+      .addcolortotime{
+        color: rgb(255, 0, 0);
+      }
+    }
+    li.rankingname{
+      margin-left: 20px;
+      margin-top: -5px;
+      font-size: 23px;
+      font-family: 'Denk One', sans-serif;
+      .addcolortoname{
+        color: rgb(255, 0, 255);
+        .buddy{
+          color: rgb(255, 0, 255);
+        }
+      }
+    }
+  }
+}

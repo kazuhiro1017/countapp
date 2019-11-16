@@ -1,8 +1,59 @@
 .post
-  %ul 
-    %li.toptext Your records,
+  %ul
+    %li.toptext Your Records,
     %li.toptextfriends Friends!!
+  - unless user_signed_in?
+    %p.unlesssignup If you sign up, your Records will be here friend!!
+    %ul
+      %li.pleasego Please go 
+      %li.linksignup
+        = link_to "Sign up !!", new_user_registration_path, class: "sign-up"
+      %li.doclick ←click!!
   - @posts.each do |post|
     = render partial: "post", locals: { post: post }
   
+  .rankingall
+    %p.ranking Record Ranking 
+    %p.topthreeletter Top 3
+    - unless user_signed_in?
+      %p.needsignin 
+        You need 
+        =  link_to "Sign in !!", new_user_session_path, class: "sign-in"
+        to check Ranking !!
+    
+    
+    - if user_signed_in? 
+      .topthreerecords
+        - @topthree.each.with_index(1) do |record, i|
+          %ul.topthreepeople
+            %li.figure 
+              - if i == 1
+                %span.oneshape #
+                %span.addcolortofigure
+                  = i
+              - else
+                %span.shape #
+                = i
+            
+            %li.rankingtime
+              - if i == 1 
+                .addcolortotime
+                  = record.time
+              - else
+                = record.time
+            
+            %li.rankingname
+              - if record.user.nickname == current_user.nickname
+                .addcolortoname
+                  [
+                  = record.user.nickname
+                  ]
+                  %span.buddy ← Buddy!!
+              - else 
+                [
+                = record.user.nickname
+                ]
+
+            
+
   = paginate(@posts)

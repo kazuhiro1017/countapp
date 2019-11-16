@@ -1,6 +1,6 @@
 #wrapper
   %header
-    %h1 Count Up
+    %h1 + Count Up +
     %p#record
       Best Record :
       %span 0
@@ -11,14 +11,29 @@
   #game
     #numbers
     #startScene
-      %p
+      %p.yourrecord
       %button START
+      - if user_signed_in?
+        %p.callout
+          = current_user.nickname
+          !!
+        %p.pleaseplay When game is done, you can send your record!!
+        %p.feelfree Feel free to write your comment!!
 
 - if user_signed_in?
   .formall
-    = form_with model: @post, html: {class: "form"}, local: true do |f|
+    = form_with model: @post, local: true do |f|
       %span.userfeel how was your game?
-      = f.text_field :time, class: "time", placeholder: "your time", readonly:""
-      = f.text_area :text, class: "text", placeholder: "type your comment", cols: "30"
+      = f.text_field :time, class: "time", placeholder: "Don't cheat  haha!", readonly:""
+      = f.text_area :text, class: "text", placeholder: "type your comment!", cols: "30"
       = f.submit "Send", class: "submit-btn"
-    
+      %span.point ←
+      %span.btnclick click!!
+
+- unless user_signed_in?
+  .wantform
+    %p.keeprecord You can write your Record, so
+    %p.remind-signin
+      Please go
+      =  link_to "Sign in !!", new_user_session_path, class: "sign-in"
+      to keep your Records!!

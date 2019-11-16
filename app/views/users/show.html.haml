@@ -1,19 +1,28 @@
--# <div class="contents row">
--#   <p><%= @nickname %>さんの投稿一覧</p>
--#   <% @tweets.each do |tweet| %>
--#     <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
--#   <% end %>
--#   <%= paginate(@tweets) %>
--# </div>
+.showpage
+  .post
+    %ul.mypageletter
+      %li Your records,
+      %li.signinname
+        = @nickname 
+      %li.signinname !!
+    - @posts.each do |post|
+      = render partial: "posts/post", locals: { post: post }
 
 
-.post
-  %ul.mypageletter
-    %li Your records,
-    %li.signinname
-      = @nickname 
-    %li.signinname !!
-  - @posts.each do |post|
-    = render partial: "posts/post", locals: { post: post }
-  
-  = paginate(@posts)
+    = paginate(@posts)
+
+  .snsall
+    %p.write-sns Share your Record to SNS!! 
+    .sns
+      =link_to "https://www.facebook.com/", class: "sns sns--facebook" do
+        = fa_icon 'facebook', class: "sns--icon"
+        %span<>
+          Facebook
+      =link_to "https://twitter.com/", class: "sns sns--twitter" do
+        = fa_icon 'twitter', class: "sns--icon-twitter"
+        %span.twitter-letter<>
+          Twitter
+      =link_to "https://www.instagram.com/", class: "sns sns--instagram" do
+        = fa_icon 'instagram', class: "sns--icon"
+        %span<>
+          Instagram

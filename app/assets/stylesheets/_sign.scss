@@ -23,6 +23,18 @@
         font-size: 30px;
         margin-bottom: 20px;
       }
+      .confirmsignup{
+        display: flex;
+        margin-bottom: 20px;
+        margin-left: 70px;
+        font-size: 20px;
+        .signup{
+          color: rgb(247, 57, 130);
+          font-size: 20px;
+          margin-left: 13px;
+          text-decoration: none;
+        }
+      }
     }
     form {
       margin: 0 50px;

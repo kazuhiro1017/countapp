@@ -24,7 +24,7 @@ header.header {
         text-decoration: none;
         color: $dark;
         line-height: 62px;
-
+        font-family: 'BioRhyme', serif;
       }
     }
     div.grid-6 {
@@ -33,10 +33,32 @@ header.header {
       a.post {
         width: 120px;
         display: inline-left;
-        margin-left: 30px;
-        text-decoration: none;
         color: $dark;
         line-height: 62px;
+        &__header-signin{
+          font-family: 'Baloo Bhai', cursive;
+          color: #41b1f1;
+          text-decoration: none;
+          font-size: 20px;
+          margin-left: 25px;
+        }
+        &__header-signup{
+          font-family: 'Baloo Bhai', cursive;
+          color: #f73982;
+          text-decoration: none;
+          font-size: 20px;
+          margin-left: 25px;
+        }
+      }
+      a.playbutton{
+        width: 120px;
+        display: inline-left;
+        margin-left: 30px;
+        text-decoration: none;
+        color: rgb(6, 245, 65);
+        line-height: 62px;
+        font-family: 'Baloo Bhai', cursive;
+        font-size: 25px;
       }
     }
   }
@@ -54,6 +76,7 @@ header.header {
       height: 50px;
       font-size: 1.2em;
       line-height: 50px;
+      font-family: 'Baloo Bhai', cursive;
       cursor: pointer;
       position: relative;
 

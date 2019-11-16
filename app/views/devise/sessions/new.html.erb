@@ -2,6 +2,13 @@
   <div class="contents row">
     <div class="container">
       <h2>Sign in</h2>
+      
+      <ul class="confirmsignup">
+        <li>
+          <h3>Friend!! Have you already done sign up?</h3>
+        <li>
+          <%= link_to "[Sign up]", new_user_registration_path, class: "signup" %>
+      </ul>
 
       <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
 
