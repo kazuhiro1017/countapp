@@ -10,11 +10,16 @@ $(document).on('turbolinks:load', function(){
     $(".rankingall").html("")
   }
 
+  $(".thankyou").hide();
+  
   $(".submit-btn").hide();
   $(".point").hide();
   $(".btnclick").hide();
 
   $(".wantform").hide();
+
+
+
 
 
   // カウントアップする数字
@@ -106,6 +111,7 @@ $(document).on('turbolinks:load', function(){
           // タイマー停止
           clearInterval(timer);
           buildform();
+
           // プレイ時間の表示
           $(".yourrecord").html("Your Record : " + $("#timer span").html());
 
@@ -116,6 +122,8 @@ $(document).on('turbolinks:load', function(){
           $("button").html("PLAY AGAIN");
 
           // ゲーム終了時にフォームにボタンと文字を表示
+          $(".thankyou").show();
+
           $(".submit-btn").show();
           $(".point").show();
           $(".btnclick").show();
