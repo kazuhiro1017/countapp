@@ -6,19 +6,20 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+  
+  ruby 2.5.1p57
 
-* System dependencies
+* Rails version
 
-* Configuration
+  Rails 5.2.3
 
-* Database creation
+* Overview
 
-* Database initialization
+  count-up game and post record of game.<br>Users compare thier own record.
 
-* How to run the test suite
+* Description
 
-* Services (job queues, cache servers, search engines, etc.)
+  First of all, user can play the game without signing up. However, User cannot write and send form of them own record without signing in. Also, User cannot see a ranking without signing in. Second, if user signs in and has own record, it can be see on ranking. color of top-user change black to red. Third, user has own page to see own record so far. User also can sign out.
 
-* Deployment instructions
 
 * ...
