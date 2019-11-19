@@ -116,7 +116,7 @@ $(document).on('turbolinks:load', function(){
           $(".yourrecord").html("Your Record : " + $("#timer span").html());
 
           // formへ"#timer span"を飛ばす!!!
-　　　　　　$("#post_time").val($("#timer span").html())
+          $("#post_time").val($("#timer span").html())
 
           // ボタンのテキスト変更
           $("button").html("PLAY AGAIN");
